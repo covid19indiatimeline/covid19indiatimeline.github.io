@@ -1,0 +1,2325 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<script type="text/javascript" src="/_static/js/wbhack.js" charset="utf-8"></script>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	  @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+	  		body {
+		    height: 100%;
+    		overflow: hidden;
+    		margin:0;
+   		}
+		#telanganatree {
+			width:100%;
+			font-family: 'Lato', sans-serif;
+			font-size:18px;
+			height:95%;
+			position:absolute;
+			left:0;
+			top:0%;
+			margin:0;
+			padding:0;
+			z-index:996;
+			display:none;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+			overflow:hidden;
+			
+		}
+		#telanganatree {
+			width:100%;
+			font-family: 'Lato', sans-serif;
+			font-size:10.5px;
+			height:100%;
+			position:absolute;
+			left:0;
+			top:0;
+			margin:0;
+			padding:0;
+			z-index:996;
+			display:none;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+			overflow:hidden;
+			
+		}
+				#telangananotice {
+			width:99%;
+			font-family: 'Lato', sans-serif;
+			height:auto;
+			position:relative;
+			left:0;
+			top:0%;
+			margin:0;
+			padding:0;
+			display:block;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+			overflow:hidden;
+			background-color:#666666;
+			z-index:999999;
+			/*border-bottom:1px solid black;*/
+			color:#ffffff;
+			font-size:14px;
+			/*display: flex;
+			display: -webkit-flex;
+			align-items: center;
+			-webkit-align-items: center;*/
+			/*padding-left:2%;
+			padding-top:1%;*/
+			padding:1%;
+		}
+		.telanganatreetitletxt {
+			font-size:9px;
+			padding-top:2px;
+		}
+		#telanganatreetitle {
+			padding-bottom:8px;
+		}
+		#telanganatreetitle1 {
+			font-weight:bold;
+			font-size:10.5px;
+		}
+		#telanganatreetitle2 {
+			padding-top:2px;
+			font-size:10px;
+		}
+		#telanganalegend {
+			padding-top:5px;
+			font-size:10px;
+			text-align:left;
+			border-top:1px solid #ccc;
+		}
+		#telanganaleg1, #telanganaleg2, #telanganaleg3 {
+			padding-top:2px;
+			position:relative;
+			width:100%;
+			height:12px;
+		}
+		.legleft {
+			position:absolute;
+			left:0%;
+			top:0;
+		}
+		.legright {
+			position:absolute;
+			left:50%;
+			top:0;
+		}
+		.clear {
+			clear:both;
+		}
+		#telanganatreebox {
+			cursor:pointer;
+			z-index:9999;
+			/*width:96%;*/
+			font-family: 'Lato', sans-serif;
+			font-size:12px;
+			padding:10px;
+			margin: 0 auto;
+			text-align:center;
+			/*background-color:#2b3d4b;
+			color:white;*/
+			background-color:#ffffff;
+			position:absolute;
+			right:5px;
+			top:4.5%;
+			box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.3);
+			max-width:220px;
+		}
+		#telanganatreeginfo {
+			border-top:1px solid #ccc;
+			margin-top:5px;
+			padding-top:5px;
+			padding-bottom:5px;
+			text-align:left;
+			font-size:10px;
+			display:none;
+			
+		
+		}
+		#dataDivTab {
+			position:absolute;
+			z-index:999;
+			background-color:white;
+			box-shadow:2px 0px 4px 0px rgba(0,0,0,0.5);
+			cursor:pointer;
+			border-radius: 0 25% 25% 0;
+			font-weight:bold;
+			background-color:#004d99;
+			color:white;
+		
+			padding-top:0;
+			padding-bottom:0;
+			padding-left:0;
+			padding-right:0;
+			right:-40px;
+			font-size:18px;
+			width:40px;
+		
+			text-align:center;
+			height:50px;
+			line-height:50px;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+		}
+		#dataDivBg {
+			/*background-color:red;*/
+			width:100%;
+			height:100%;
+			z-index:999;
+			position:absolute;
+			top:0;
+			left:0;
+			opacity:0;
+		}
+		
+		#zoomdiv {
+			position:absolute;
+				left:20px;
+				top:150px;
+				z-index:998;
+				background-color:white;
+				font-family: 'Lato', sans-serif;
+				font-size:12px;
+				/*border:1px solid black;*/
+				//box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.3);
+				text-align:center;
+		}
+		#instrtxt {
+			position:absolute;
+				left:60px;
+				top:6px;
+				z-index:998;
+				
+				font-family: 'Lato', sans-serif;
+				font-size:12px;
+				
+				text-align:center;
+				background:none;
+		}
+		#instrtxt div{
+			padding:5px;
+			margin:6px;
+			background-color:white;
+			border:1px solid black;
+			border-radius: 6px;	
+		}
+		#filterdiv {
+			position:absolute;
+			width:380px;
+			left:0px;
+			top:300px;
+			z-index:999;
+			background-color:white;
+			font-family: 'Lato', sans-serif;
+			font-size:12px;
+			/*border:1px solid black;*/
+			box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.3);
+			text-align:left;
+		}
+		.zoombtn, .fbtn {
+			padding:8px 15px 8px 15px;
+			/*border:1px solid black;*/
+			cursor:pointer;
+			-webkit-user-select: none; /* Safari */
+			  -ms-user-select: none; /* IE 10+ and Edge */
+			  user-select: none; /* Standard syntax */
+			
+		}
+		#btn1 {
+			
+		}
+		#btn2, #fbtn0, #fbtn2, #fbtn4, #fbtn6  {
+			border-top:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+		}	
+		#btn3 {
+		}
+		#svg1 {
+			/*border:5px solid green;*/
+			
+		}
+		#g1 {
+			
+			/*outline: thick solid black;*/
+		}
+		.stext {
+			/*outline: thick solid white;*/
+			 /*font-size:  18px;*/
+			paint-order: stroke;
+			stroke: white;
+			stroke-width: 5px;
+			*stroke-linecap: round;
+			stroke-linejoin: round;
+			font-weight: 1000;
+		}
+		.node circle {
+		  fill: #fff;
+		  stroke: steelblue;
+		  stroke-width: 2px;
+		}
+		
+		.icplus {
+			font-size:20px;
+		}
+
+		.node text {
+		}
+
+		.link {
+		  fill: none;
+		  stroke: #cccccc;
+		  stroke-width: 1px;
+		}
+		#cnalogodiv {
+			position:absolute;
+			bottom:15px;
+			right:10px;
+			z-index:999;
+			cursor:pointer;
+		}
+		#cnalogo {
+			width:30px;
+			z-index:999;
+		}
+		#instrdiv {
+			position:absolute;
+			top:150px;
+			left:0%;
+			z-index:9999;
+			cursor:pointer;
+			width:100%;
+			height:100%;
+			//background:rgba(0,0,0,0.3);
+		}
+		#instr {
+			width:40%;
+			z-index:999;
+			position:absolute;
+			left:30%;
+			top:30%;
+		}
+		.fa-eye {
+			font-size:10px;
+		}
+		.fa-plane {
+			color:rgb(20, 89, 104);
+		}
+		.fa-check-circle {
+			color:rgb(46, 173, 180);
+		}
+		.fa-plus-circle {
+			color:#ff0000;
+		}
+		.fa-info-circle {
+		
+		}
+		.icplane, .iccheck, .icinfo, .icplus {
+    			font-size:14.3px;
+			}
+		div.tooltip {	
+			position: absolute;			
+			text-align: center;			
+			/*width: 60px;					
+			height: 28px;	*/				
+			padding: 5px;				
+			font: 12px sans-serif;		
+			background: lightsteelblue;	
+			border: 0px;		
+			border-radius: 8px;			
+			pointer-events: none;			
+		}
+		#socialDiv {
+			position:absolute;
+			top: 0.5%;
+			/*top:-10%;*/
+			right: 0.5%;
+			z-index: 9999999999;
+			vertical-align:middle !important;
+			/*opacity: 0;*/
+			display:block;
+		
+		}
+		#twDiv1 {
+			float:left;
+			/*margin: 0.4vw;*/
+			margin-left: 0.3vw;
+			margin-top: 0vw;
+			vertical-align:middle !important;
+			line-height:normal;
+		}
+		#fbDiv1 {
+			float:left;
+			vertical-align:middle !important;
+			line-height:normal;
+		}
+		@media only screen and (max-width: 980px) {
+			#telanganatree {
+				font-size:18.3px;
+		
+		                    }
+		#telangananotice {
+				width:96%;
+				height:auto;
+				font-size:11px;
+				padding:1%;
+				padding-left:2%;
+				padding-right:2%;
+			}
+		
+			#telanganatreebox {
+			left: auto;
+			right:5px;
+    		        top: 200px;
+    	         	padding:8px;
+    		}
+    		.icplane, .iccheck, .icinfo, .icplus {
+    			font-size:16.3px;
+			}
+			#telanganatreetitle {
+				font-size:10px;
+				padding:0px;
+				padding-bottom:8px;
+			}
+			#zoomdiv, #filterdiv {
+				font-size:10px;
+				
+			}
+			.zoombtn, .fbtn {
+				padding:6px;
+				padding-top:10px;
+				padding-bottom:10px;
+				/*border:1px solid black;*/
+				cursor:pointer;
+			}
+			.zoombtn {
+				padding:8px 15px 8px 15px;
+			}
+			#zoomdiv {
+				left:10px;
+				
+			}
+			#filterdiv {
+				left:0%;
+				top:140px;
+				width:70%;
+			}
+			#instr {
+				width:70%;
+				z-index:999;
+				position:absolute;
+				left:15%;
+				top:35%;
+				display:none;
+			}
+			#instrtxt {
+				left:60px;
+				top:8px;
+				font-size:12px;
+			}
+			#instrtxt div{
+				padding:5px;
+				margin:3px;
+				border-radius: 6px;	
+			}
+		}
+
+
+
+
+  <style>
+.img-thumbnail{-webkit-box-shadow:0 1px 2px rgba(0,0,0,.075);box-shadow:0 1px 2px rgba(0,0,0,.075)}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    body {  
+	background-color:
+	font-family: Verdana, Arial, Helvetica,sans-serif;
+        font-size: 20px;
+        color: #000000;
+}
+
+    .navbar {
+              font-size: 20px;
+      padding-top: 20px;
+      background-color: #151515;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color:  #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #151515;
+      color: white;
+      padding: 15px;
+    }
+
+    
+    
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}});</script>
+</style>
+	<title>COVID-19 Telangana History</title>
+	<title>India COVID-19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  <link rel="stylesheet" href="../css/web.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+<link rel="stylesheet" href="../css/web.css">
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-121626592-12');
+	</script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="https://assets.adobedtm.com/146001d52b8325bae1cbfb036eb775fd04bcda33/satelliteLib-377b5883f7bd479499e17495b18bc449995f70a0.js"></script>
+	
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+    
+    
+	<!-- load the d3.js library -->	
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+ <script type="text/javascript" src="/_static/js/timestamp.js" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/graph-calc.js" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/auto-complete.js" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/toolbar.js" charset="utf-8"></script>
+
+<div class="row">
+<div class="col-sm-12">
+<div style="text-align: center;	width:800px;margin:0 auto; background-color:beige;">
+<h4><font color=maroon>Covid-19 Telangana Cases Trace history:</font>  Last update March 26th, 2020.<br> <small>Interactive graph has been inspired and borrowed from <a href="https://infographics.channelnewsasia.com/covid-19/coronavirus-singapore-clusters.html">Channel News Asia, Singapore Cases Trace history.</a></small></h4>
+</div></div>
+</div>
+
+
+
+<div id="dataDivBg"></div>
+<div id="telanganatree"></div>
+
+
+
+
+<div id="zoomdiv">
+	<div id="btn1" class="zoombtn"><i class="fa fa-refresh"></i></div>
+	<div id="btn2" class="zoombtn"><i class="fa fa-plus"></i></div>
+	<div id="btn3" class="zoombtn"><i class="fa fa-minus"></i></div>
+</div>
+
+
+<div id="instrdiv">
+	<div id="instrtxt">
+		<div id="instrtxt1">ZOOM TO FIT</div>
+		<div id="instrtxt2">ZOOM IN</div>
+		<div id="instrtxt3">ZOOM OUT</div>
+	</div>
+
+</div>
+
+
+
+<div id="filterdiv">
+<div id="dataDivTab">+</div>
+<div id="fbtnall" class="fbtn">SHOW ALL</div>
+  <div id="fbtn0" class="fbtn">Travel from Europe </div>  <div id="fbtn1" class="fbtn">Travel from Indonesia </div>  <div id="fbtn2" class="fbtn">Travel from Middle East </div>  <div id="fbtn3" class="fbtn">Travel from Rest of the world </div>  <div id="fbtn4" class="fbtn">Travel from United Kingdom </div>  <div id="fbtn5" class="fbtn">Unknown </div></div>
+<script>
+var treeData = 
+  {
+    "name": "Telegana Confirmed cases",
+    "parent": "null",
+    "children": [
+
+		         {
+		         "name": " Travel from Europe",
+			"children": [
+			 		
+			  {   
+				"case": "2",
+				"name": "At Hyderabad, 14-Mar,  Italy ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "28",
+				"name": "At Hyderabad, 23-Mar, Male, 21,  France ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "24",
+				"name": "At Rajolu, 22-Mar, Male, 26,  Sweden ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "35",
+				"name": "At Rangareddy, 24-Mar, Female, 39,  Germany ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "25",
+				"name": "At Manikonda, 22-Mar, Male, 34,  Sweden ",
+				//"type": "imported",
+				"gp": "4",
+					"children": [			
+ 		         			{ 
+						"case": "37",
+			                 		  "name": "At Manikonda, 24-Mar, Female, 64, Contact ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 
+			    ]
+			    
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		         {
+		         "name": " Travel from Indonesia",
+			"children": [
+			 		
+			  {   
+				"case": "5",
+				"name": "At , 17-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "10",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "11",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "12",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "13",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "7",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "8",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "9",
+				"name": "At , 18-Mar,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "18",
+				"name": "At , 20-Mar, Male, 27,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "19",
+				"name": "At , 20-Mar, Male, 60,  Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "30",
+				"name": "At Karimnagar, 23-Mar, Male, 23, Contact with people from Indonesia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		         {
+		         "name": " Travel from Middle East",
+			"children": [
+			 		
+			  {   
+				"case": "41",
+				"name": "At  , 25-Mar, Male, 3,  Saudi Arabia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "21",
+				"name": "At Beliseema, 21-Mar, Male, 33,  Dubai ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "1",
+				"name": "At Hyderabad, 03-Mar, 24,  Dubai  via Hong Kong ", "recovered" :  "1", 
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "27",
+				"name": "At Hyderabad, 22-Mar, Female, 50, Travel history of her husband to Dubai ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "36",
+				"name": "At Hyderabad, 24-Mar, Female, 61,  Saudi Arabia ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "14",
+				"name": "At , 19-Mar,  Dubai ",
+				//"type": "imported",
+				"gp": "4",
+					"children": [			
+ 		         			{ 
+						"case": "20",
+			                 		  "name": "At , 21-Mar, Male, 35,  Contact ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 
+			    ]
+			    
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		         {
+		         "name": " Travel from Rest of the world",
+			"children": [
+			 		
+			  {   
+				"case": "31",
+				"name": "At Hyderabad, 23-Mar, Male, 20,  New York ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "33",
+				"name": "At Medchal, 23-Mar, Male, 56,  Sri Lanka ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "42",
+				"name": "At Medchal, 26-Mar, Male, 49, Contact and Travel to Delhi ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "45",
+				"name": "At Secundarabad, 26-Mar, Male, 45, Delhi ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "44",
+				"name": "At Hyderabad, 26-Mar, Male, 41, Tirupathi and Yashoda Hospital ",
+				//"type": "imported",
+				"gp": "4",
+					"children": [			
+ 		         			{ 
+						"case": "43",
+			                 		  "name": "At Hyderabad, 26-Mar, Female, 36, Spouse ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 
+			    ]
+			    
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		         {
+		         "name": " Travel from United Kingdom",
+			"children": [
+			 		
+			  {   
+				"case": "6",
+				"name": "At , 18-Mar, Male, 20,  Scotland ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "15",
+				"name": "At , 19-Mar,  London ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "16",
+				"name": "At , 19-Mar,  London ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "17",
+				"name": "At , 20-Mar, Female, 18,  London ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "22",
+				"name": "At Guntur, 22-Mar, Male, 24,  London via Dubai ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "23",
+				"name": "At Hyderabad, 22-Mar, Male, 23,  London via Doha ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "29",
+				"name": "At Hyderabad, 23-Mar, Male, 30,  London ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "32",
+				"name": "At Hyderabad, 23-Mar, Male, 25,  London ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "26",
+				"name": "At Kothagudem, 22-Mar, Male, 23,  London ",
+				//"type": "imported",
+				"gp": "4",
+					"children": [			
+ 		         			{ 
+						"case": "38",
+			                 		  "name": "At Kothagudem, 24-Mar, Male, 57, Contact ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 			
+ 		         			{ 
+						"case": "39",
+			                 		  "name": "At Kothagudem, 24-Mar, Female, Contact  ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 
+			    ]
+			    
+			     },
+			   		
+			  {   
+				"case": "34",
+				"name": "At Rangareddy, 24-Mar, Male, 49,  London ",
+				//"type": "imported",
+				"gp": "4",
+					"children": [			
+ 		         			{ 
+						"case": "40",
+			                 		  "name": "At Rangareddy, 25-Mar, Female, 43, Contact ",
+						//"type": "imported",
+						"gp": "6",
+						  },	
+							 
+			    ]
+			    
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		         {
+		         "name": " Unknown",
+			"children": [
+			 		
+			  {   
+				"case": "3",
+				"name": "At , 15-Mar ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			   		
+			  {   
+				"case": "4",
+				"name": "At , 16-Mar ",
+				//"type": "imported",
+				"gp": "4",
+			     },
+			     
+           
+
+               ]
+                          },
+			  
+		]
+		};
+		//var fullWidth = window.innerWidth;
+//var fullHeight = window.innerHeight;
+
+var fullWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var fullHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+
+var g;
+var g2;
+
+var zoomtype = 0;
+
+var t3fac = 1.3;
+var t3fac2 = 120;
+var treeheightfac = 1.8;
+var treewidthfac = 1;
+var treew = 0.3;
+//var leftos = fullWidth*treew*0.8;
+var leftos = 0;
+var t3tr = 0;
+var t4tr = 0;
+
+var firstld;
+
+if (fullWidth<980) {
+	t3tr = 0;
+	t4tr = 0;
+	t3fac = 1.4;
+	t3fac2 = 190;
+	//leftos = fullWidth*treew*1.5;
+	leftos = 0;
+	treeheightfac = 3;
+	treewidthfac = 1;
+	treew = 0.9;
+}
+
+//var transfac = leftos*t3fac;
+var transfac = leftos + t3fac2;
+
+// Set the dimensions and margins of the diagram
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = fullWidth - margin.left - margin.right,
+    height = fullHeight - margin.top - margin.bottom;
+
+//calculate full extent zoom
+var firstLoad = 0;
+var zoomfirst = -2;
+
+var fshow1 = 1;
+var fshow2 = 1;
+var fshow3 = 1;
+
+var div;
+
+var svg;   
+
+var i = 0,
+	duration = 400,
+	root;
+	
+var linkcol = ["#55cbe9","#2d8659","#3399ff","#8e9aa6","#c4482e","#ffcf47","#996633","#6600cc","#e67300"];
+	
+var treemap;
+
+var parnow = "";
+
+let transform = d3.zoomIdentity.translate(margin.left, margin.top);
+    
+// then, create the zoom behvavior
+const zoom = d3.zoom()
+    //.scaleExtent([0.65, 2])
+    //.translateExtent([[0,(margin.top)*(-1)], [(width)*1.5, (height)*1.54]])
+    // .translateExtent([[(width)*(-0.8),(margin.top)*(-0.8)], [(width)*0.8, (height)*1.5]])
+    //.extent([[0, 0], [(width + margin.right + margin.left)*1, (height + margin.top + margin.bottom)*1]])
+    .on("zoom", zoomed);
+    
+$( document ).ready(function() {
+	//getsheet();
+	
+	$( window ).resize(function() {
+		document.getElementById("telanganatree").style.display = "none";
+	  slideIn();
+	  //zoomfit();
+	  	fullWidth = window.innerWidth;
+		fullHeight = window.innerHeight;
+		maketree();
+	});
+	
+	document.getElementById("btn1").addEventListener("click",zoomfit);
+	document.getElementById("btn2").addEventListener("click",zoomin);
+	document.getElementById("btn3").addEventListener("click",zoomout);
+
+	$(".fbtn").click(function(e) {
+		togfil(e)
+	});
+	
+	$("#dataDivTab").click(function(e) {
+		if ($("#dataDivTab").html()=="x") {
+			gtag('event', 'tableclosetab');
+			slideIn();
+		} else {
+			gtag('event', 'tableopen');
+			slideOut();
+		}
+		//alert($("#dataDivTab").html());
+	});
+	
+	$("#dataDivBg").click(function(e) {
+		gtag('event', 'tablecloseother');
+		slideIn();
+	});
+	
+	$("#telanganatreebox").click(function(e) {
+		gtag('event', 'mainboxclick');
+		if ($("#dataDivTab").html()=="x") {
+			slideIn();
+		} else {
+			slideOut();
+		}
+	});
+	
+	$("#cnalogodiv").click(function(e) {
+		gtag('event', 'cnalogoclick');
+		window.open('https://www.channelnewsasia.com/news/topics/telangana-virus', '_blank').focus();
+		
+	});
+	
+	$("#instrdiv").click(function(e) {
+		gtag('event', 'instructionsclick');
+		//firstld;
+		clearTimeout(firstld);
+		instihide();
+		
+	});
+	
+	if (fullWidth<800) {
+		$("#instrdiv").hide();
+		setTimeout(slideIn, 1000);
+	} else {
+		firstld = setTimeout(instihide, 3500);
+	}
+	
+	//setTimeout(slideIn, 1000);
+	
+	
+});
+
+function slideIn() {
+	$("#filterdiv").animate({left: "-" + ($("#filterdiv").outerWidth()+5) + 'px'});
+	$("#dataDivTab").html("+");
+	$("#dataDivBg").hide();
+}
+
+function slideOut() {
+	//$("#dataDiv").animate({left: '0%'});
+	$("#filterdiv").animate({left: '0'});
+	$("#dataDivTab").html("x");
+	$("#dataDivBg").show();
+
+}
+function instihide () {
+	$("#instrdiv").fadeOut();
+	setTimeout(slideIn, 1000);
+}
+		
+
+function togfil(e) {
+	
+	
+	//var t = e.target;
+	var idstr = e.target.id.replace("fbtn", "");
+	zoomfirst = idstr;
+	//alert(idstr);
+	//zoomtype = idstr;
+	//console.log(e.target)
+	//alert(idstr);
+	if (idstr=="all") {
+		treemap.size([height*treeheightfac, width*treewidthfac]);
+		zoomfirst = -1;
+		gtag('event', 'showallclick');
+		svg.select("#g2").remove();
+		expand(root); 
+    	update(root);
+    	
+	} else {
+		
+		var newDiv = root.children[idstr].data.name;
+		
+		if (idstr=="0"){
+			treemap.size([height*treeheightfac*0.37, width*treewidthfac]);
+		} else if (idstr=="1"){ 
+			treemap.size([height*treeheightfac*0.2, width*treewidthfac]);
+		} else if (idstr=="2"){ 
+			treemap.size([height*treeheightfac*0.2, width*treewidthfac]);
+		} else if (idstr=="3"){ 
+			treemap.size([height*treeheightfac*0.2, width*treewidthfac]);
+		} else if (idstr=="4"){ 
+			treemap.size([height*treeheightfac*0.2, width*treewidthfac]);
+		} else if (idstr=="5"){ 
+			treemap.size([height*treeheightfac*0.3, width*treewidthfac]);
+		} else if (idstr=="6"){ 
+			treemap.size([height*treeheightfac*0.46, width*treewidthfac]);
+		} else {
+			treemap.size([height*treeheightfac, width*treewidthfac]);
+			zoomfirst = -1;
+		}
+		
+		if (root.children[idstr].data.cluster!=undefined) {
+			newDiv = newDiv + root.children[idstr].data.cluster;
+		}
+		
+		newDiv = newDiv.replace(/\s/g, '');
+		newDiv = newDiv.replace(/[^a-zA-Z ]/g, "");
+		
+		/*if(newDiv.length > 10) {
+			newDiv = newDiv.substring(0,20);
+		}*/
+		
+		
+		gtag('event', 'showclick' + newDiv);
+		svg.select("#g2").remove();
+		root.children.forEach(collapse);
+		expand(root.children[idstr]);
+		update(root);
+		//d3.select('#md' +idstr).dispatch('click');
+	}
+	slideIn();
+	//zoomfit();
+
+}
+
+//var zoomfitct = 0;
+
+function zoomfit(){
+	//zoomfitct++;
+	//console.log("zoomfit: " + zoomfitct);
+	
+	//alert(zoomtype);
+	
+	gtag('event', 'zoomfitclick');
+	
+	fullWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	fullHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	
+	document.getElementById("telanganatree").style.display = "block";
+	
+	drawrel();
+	
+	var heightTop = fullHeight *0;
+	var scaleFac = 0.85;
+	var paddingPercent = 1;
+	if (fullWidth<980) {
+		heightTop = 185;
+		scaleFac = 1;
+		paddingPercent = 1;
+	}
+	
+
+
+	//svg.call( zoom.transform, d3.zoomIdentity.scale(scale*scaleFac).translate(xtranslate1,xtranslate2));
+	
+	//svg.call( zoom.transform, d3.zoomIdentity.translate(xtranslate1,xtranslate2));
+	
+	var winHeight = fullHeight - heightTop;
+	
+	
+	var box = g.node().getBBox();
+	 scale = Math.min(window.innerWidth / box.width, winHeight / box.height);
+
+	// Reset transform.
+	let transform = d3.zoomIdentity;
+	// Center [0, 0].
+	transform = transform.translate(window.innerWidth / 2, winHeight / 2);
+	// Apply scale.
+	transform = transform.scale(scale*scaleFac);
+	// Center elements.
+	//transform = transform.translate(-box.x - box.width / 2, -box.y - box.height / 2);
+	transform = transform.translate(-box.x - box.width / 2, (-box.y - box.height / 2) + (heightTop*2.4));
+	
+	//zoom.transform($svg, transform);
+
+	//svg.call( zoom.transform, transform);
+
+	//zoom.scaleExtent([scale*0.6, scale*3]);
+	//drawrel();
+	
+
+	
+	if (zoomfirst==-2) {
+	
+		svg.call( zoom.transform, transform);
+	
+		var transform2 = d3.zoomIdentity
+                    .scale(scale*2)
+                    .translate(-box.x , (box.y) + (heightTop*2));
+                    
+		if (fullWidth<980) {
+		
+			svg.transition().duration(1000).call(zoom.transform, transform2);
+		} else {
+			transform2 = d3.zoomIdentity
+                    .scale(scale*2.1)
+                    .translate(-box.x + (fullWidth*0.05), box.y + (fullHeight*0.05)) ;
+         
+		}
+		svg.transition().duration(1000).call(zoom.transform, transform2);
+		zoomfirst = -1;
+	} else if (zoomfirst==0) {
+		var transform2 = d3.zoomIdentity
+                    .scale(scale*1.7)
+                    .translate(-box.x , (box.y) + (heightTop*2));
+                    
+		if (fullWidth<980) {
+		
+			svg.transition().duration(1000).call(zoom.transform, transform2);
+		} else {
+			transform2 = d3.zoomIdentity
+                    .scale(scale*0.9)
+                    .translate(-box.x + (fullWidth*0.05), box.y + (fullHeight*0.08)) ;
+         
+		}
+		svg.transition().duration(1000).call(zoom.transform, transform2);
+		zoomfirst = -1;
+	} else if ((zoomfirst==1)||(zoomfirst==2)||(zoomfirst==4)) {
+		var transform2 = d3.zoomIdentity
+                    .scale(scale*1)
+                    .translate(-box.x , (box.y) + (heightTop*2));
+                    
+		if (fullWidth<980) {
+		
+			svg.transition().duration(1000).call(zoom.transform, transform2);
+		} else {
+			transform2 = d3.zoomIdentity
+                    .scale(scale*0.8)
+                    .translate(-box.x + (fullWidth*0.05), box.y + (fullHeight*0.13)) ;
+         
+		}
+		svg.transition().duration(1000).call(zoom.transform, transform2);
+		zoomfirst = -1;
+	
+	} else if (zoomfirst==3) {
+		var transform2 = d3.zoomIdentity
+                    .scale(scale*1.5)
+                    .translate(-box.x , (box.y) + (heightTop*2));
+                    
+		if (fullWidth<980) {
+		
+			svg.transition().duration(1000).call(zoom.transform, transform2);
+		} else {
+			transform2 = d3.zoomIdentity
+                    .scale(scale*0.9)
+                    .translate(-box.x + (fullWidth*0.05), box.y + (fullHeight*0.22)) ;
+         
+		}
+		svg.transition().duration(1000).call(zoom.transform, transform2);
+		zoomfirst = -1;
+	
+	} else if (zoomfirst==5) {
+		var transform2 = d3.zoomIdentity
+                    .scale(scale*1.8)
+                    .translate(-box.x , (box.y) + (heightTop*2));
+                    
+		if (fullWidth<980) {
+		
+			svg.transition().duration(1000).call(zoom.transform, transform2);
+		} else {
+			transform2 = d3.zoomIdentity
+                    .scale(scale*0.9)
+                    .translate(-box.x + (fullWidth*0.05), box.y + (fullHeight*0.25)) ;
+         
+		}
+		svg.transition().duration(1000).call(zoom.transform, transform2);
+		zoomfirst = -1;
+	
+	} else {
+	
+		svg.call( zoom.transform, transform);
+
+	
+	
+	}
+	
+	zoom.scaleExtent([scale*0.75, scale*4]);
+	
+
+}
+
+function zoomin(){
+	gtag('event', 'zoominclick');
+	svg.transition().call(zoom.scaleBy, 1.5);
+	drawrel();
+}
+
+function zoomout(){
+	gtag('event', 'zoomoutclick');
+	svg.transition().call(zoom.scaleBy, 0.5);
+	drawrel();
+}
+    
+function zoomed(){
+ // svg.attr("transform", d3.event.transform);
+ div.style("opacity", 0);
+  g.attr(
+      "transform",
+      d3.event.transform
+    );
+}
+
+
+
+maketree();
+
+function maketree() {
+
+	d3.select("#svg1").remove();
+
+	// append the svg object to the body of the page
+	// appends a 'group' element to 'svg'
+	// moves the 'group' element to the top left margin
+	svg = d3.select("#telanganatree").append("svg")
+		//.attr("viewBox", '0 0 '+ (width + margin.right + margin.left) +' ' +  (height + margin.top + margin.bottom))
+		.attr("viewBox", '0 0 '+ fullWidth +' ' +  fullHeight)
+		//.attr("width", fullWidth)
+		//.attr("height", fullHeight)
+		.attr("id","svg1")
+		.call(zoom);
+		//.append("g");
+		//.attr("transform", "translate("
+		//+ margin.left + "," + margin.top + ")");
+	
+	//var group1 = svg.append("g");
+	g = svg.append("g").attr("id","g1");
+	//.attr("transform-origin", "0% 0%");
+
+	g.append('circle')
+		  .attr('class', 'node')
+		  .attr('r', 6)
+		  .style("fill", "#fff");
+
+	// Define the div for the tooltip
+	div = d3.select("#telanganatree").append("div")	
+		.attr("class", "tooltip")				
+		.style("opacity", 0);
+	
+	//svg.call(zoom.transform, transform);
+	//zoomfit();
+
+
+
+	// declares a tree layout and assigns the size
+	treemap = d3.tree().size([height*treeheightfac, width*treewidthfac]).separation(function(a, b) { return (a.parent == b.parent ? 1 : 1.5) / (1 + (a.depth*0.25)); });
+	
+	//treemap = d3.tree().size([height*treeheightfac, width*treewidthfac]);
+
+	// Assigns parent, children, height, depth
+	root = d3.hierarchy(treeData, function(d) { return d.children; });
+	root.x0 = height / 2;
+	root.y0 = 0;
+
+	// Collapse after the second level
+	//root.children.forEach(collapse);
+
+	//collapse(root.children[root.children.length -1]);
+	//collapse(root.children[root.children.length -2]);
+	update(root);
+
+}
+
+
+
+// Collapse the node and all it's children
+function collapse(d) {
+  if(d.children) {
+    d._children = d.children
+    //d._children.forEach(collapse)
+    d.children = null
+  }
+}
+
+function expand(d){   
+    var children = (d.children)?d.children:d._children;
+    if (d._children) {        
+        d.children = d._children;
+        d._children = null;       
+    }
+    if(children)
+      children.forEach(expand);
+}
+
+function update(source) {	
+	
+  // Assigns the x and y position for the nodes
+  var treeData = treemap(root);
+
+  // Compute the new tree layout.
+  var nodes = treeData.descendants(),
+      links = treeData.descendants().slice(1);
+      
+    //Hide root node and edges in D3 v4 Tree Diagram
+    nodes = nodes.filter(function(d){
+		return d.depth != 0;
+	})
+	
+	links = links.filter(function(d){
+		return d.depth != 1;
+	})
+	
+
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d){ 
+  		d.y = ((d.depth - 1) * (fullWidth*treew))
+  });
+
+  // ****************** Nodes section ***************************
+
+  // Update the nodes...
+  var node = g.selectAll('g.node')
+      .data(nodes, function(d) {return d.id || (d.id = ++i); });
+
+  // Enter any new modes at the parent's previous position.
+  var nodeEnter = node.enter().append('g')
+      .attr('class', 'node')
+      .attr("id", function(d, i) {
+      		if (d.data.case!=undefined) {
+          		return "nd" + d.data.case;
+          	} else {
+          		return "md" + i;
+          	}
+      })
+      .attr("transform", function(d, i) {
+      	return "translate(" + source.y0 + "," + source.x0 + ")";
+      	
+     })
+    .on('click', click);
+
+  // Add Circle for the nodes
+  nodeEnter.append('circle')
+      .attr('class', 'node')
+      .attr('r', 1e-6)
+      .style("fill", function(d) {
+      	//console.log(d);
+          return d._children ? "lightsteelblue" : "#fff";
+      });
+      
+  nodeEnter.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'central')
+    .attr('font-family', 'FontAwesome')
+    .style('fill', '#ff0000')
+    .attr("class", "icplus")
+    .attr("x", function(d) {
+          return d.data.type!=undefined ? 24 : 0;
+      })
+    .text(function(d) { return  d.data.new!=undefined ? '\uf055' : ''; })    
+    .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html("New case")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+      
+  nodeEnter.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'central')
+    .attr('font-family', 'FontAwesome')
+    .style('fill', '#145968')
+    .attr("class", "icplane")
+    .attr("x", function(d) {
+          return d.data.type!=undefined ? 16 : 0;
+      })
+    .text(function(d) { return  d.data.type=="imported" ? '\uf072' : ''; })    
+    .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html("Imported case")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+
+  nodeEnter.append('text')
+    .attr('text-anchor', 'start')
+    .attr('dominant-baseline', 'central')
+    .attr('font-family', 'FontAwesome')
+    .style('fill', '#000000')
+    .attr("class", "icinfo")
+    .attr("x", function(d) {
+          return d.data.info!=undefined ? -26 : 0;
+      })
+    .text(function(d) { return  d.data.info==undefined ? '' : '\uf05a'; })    
+    .on("mouseover", function(d) {		
+    		if (d.data.info == "hyatt") {
+				div.transition()		
+					.duration(200)		
+					.style("opacity", .9);		
+				div	.html("Also linked to confirmed cases <br/>involving South Korean, Malaysian<br/>and British nationals")	
+					.style("left", (d3.event.pageX) + "px")		
+					.style("top", (d3.event.pageY - 28) + "px");	
+					}
+				})			
+        .on("mouseout", function(d) {	
+        	if (d.data.info == "hyatt") {	
+				div.transition()		
+					.duration(500)		
+					.style("opacity", 0);	
+            }
+        })
+        .on('click', click2);
+
+  nodeEnter.append('circle')
+  	.filter(function(d){ return d.data.death!=undefined; })
+      .attr('class', "deathcir")
+      .attr('r', 8)
+      .style("fill", "#FF0000")
+      .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html("Deceased")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+
+ 				   
+  nodeEnter.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'central')
+    .attr('font-family', 'FontAwesome')
+    .style('fill', '#2eadb4')
+    .attr("class", "iccheck")
+    .attr("x", function(d) {
+          return 0;
+      })
+    .text(function(d) { return  d.data.recovered!=undefined ? '\uf058' : ''; })    
+    .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html("Discharged")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+    
+/* nodeEnter.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'central')
+    .attr('font-family', 'FontAwesome')
+    .style('fill', '#2eadb4')
+    .attr("class", "iccheck")
+    .attr("x", function(d) { return d.data.recovered!=undefined ? 24 : 0;
+    })
+    .text(function(d) { return  d.data.recovered!=undefined ? '\uf058' : ''; })
+    .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html("Discharged")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+    */
+    
+  nodeEnter.append('text')
+      //.attr("dy", "1.85em")
+      
+      .attr("x", function(d) {
+      
+      		if (d.data.case!=undefined) {
+      			var xct = 12;
+      			if (d.data.type!=undefined){
+      				xct += 16;
+      			} 
+      			/*if (d.data.recovered!=undefined){
+      				xct += 16;
+      			}*/
+      			
+      			return xct;
+      			
+      		} else if (d.data.info!=undefined) {
+      			return -33;
+      		} else {
+      			return -18;
+      		}
+      })
+      .attr("dy", function(d) {
+      		if (d.data.case!=undefined) {
+      			if (d.data.cluster!=undefined) {
+      				return "0.35em";
+      			} else {
+      				return "0.35em";
+      			}
+      		} else if (d.data.type=="info") {
+      			if (d.data.cluster!=undefined) {
+      				return "-0.95em";
+      			} else {
+      				return "0.25em";
+      			}
+      		}else {
+      			if (d.data.cluster!=undefined) {
+      				return "-1em";
+      			} else {
+      				return "0.25em";
+      			}
+      		}
+      		//return d.data.case!=undefined ? "0.25em" : "-1em";
+          
+      })
+      .attr("id", function(d) {
+      		if (d.data.case!=undefined) {
+          		return "ndt" + d.data.case;
+          	}
+      })
+      .attr("class", "stext")
+      .attr("text-anchor", function(d) {
+      		if (d.data.case!=undefined) {
+      			return "start";
+      		} else if (d.data.type=="info") {
+      			return "start";
+      		}else {
+      			return "end";
+      		}
+      })
+      .style('fill', function(d) {
+      		if (d.data.url!=undefined) {
+          		return "#0033cc"
+          	} else {
+          		return "#000";
+          	}
+      })
+       .style('cursor', function(d) {
+      		if (d.data.url!=undefined) {
+          		return "pointer"
+          	} else {
+          		return "default";
+          	}
+      })
+      /*.style('text-decoration', function(d) {
+      		if (d.data.url!=undefined) {
+          		return "underline"
+          	} else {
+          		return "none";
+          	}
+      })*/
+      .text(function(d) { 
+      	//return d.data.name; 
+      	return d.data.case!=undefined ? "Case " + d.data.case + ": " + d.data.name : d.data.name;
+      });
+      
+      nodeEnter.append('text')
+      //.attr("dy", "1.85em")
+      
+      .attr("x", function(d) {
+      
+      		if (d.data.case!=undefined) {
+      			var xct = 10;
+      			if (d.data.type!=undefined){
+      				xct += 12;
+      			} 
+      			if (d.data.recovered!=undefined){
+      				xct += 12;
+      			}
+      			
+      			return xct;
+      			
+      		} else if (d.data.type=="info") {
+      			return 13;
+      		} else {
+      			return -18;
+      		}
+      })
+      .attr("dy", function(d) {
+      
+      	if (d.data.case!=undefined) {
+      		return "1.50em";
+      	} else {
+      		return "0.20em";
+      	}
+      
+      
+      })
+      .attr("class", "stext")
+      .attr("text-anchor", function(d) {
+      		if (d.data.case!=undefined) {
+      			return "start";
+      		} else if (d.data.type=="info") {
+      			return "start";
+      		}else {
+      			return "end";
+      		}
+      })
+      .style('fill', function(d) {
+      		if (d.data.url!=undefined) {
+          		return "#0033cc"
+          	} else {
+          		return "#000";
+          	}
+      })
+       .style('cursor', function(d) {
+      		if (d.data.url!=undefined) {
+          		return "pointer"
+          	} else {
+          		return "default";
+          	}
+      })
+      .text(function(d) { 
+      	//return d.data.name; 
+      	if (d.data.cluster!=undefined) {
+      		return d.data.cluster;
+      	}
+      });
+      
+/*nodeEnter.append("rect")
+	.attr("x", 0)
+	.attr("y", 0)
+	.attr("width", function(d){ 
+		console.log(this.parentNode);
+		return this.parentNode.getBBox().width + 2;})
+	.attr("height", function(d) {return this.parentNode.getBBox().width + 2;})
+	.style("fill", "#80d6c7");*/
+      
+
+  // UPDATE
+  var nodeUpdate = nodeEnter.merge(node);
+
+  // Transition to the proper position for the node
+  nodeUpdate.transition()
+    .duration(duration)
+    .attr("transform", function(d) { 
+    
+    	if (d.depth==3) {
+      		 return "translate(" + (d.y + (transfac) + t3tr) + "," + d.x + ")";
+      	} else if (d.depth==4) {
+      		 return "translate(" + (d.y + (transfac) + t3tr + t4tr) + "," + d.x + ")";
+      	} else {
+      	 	return "translate(" + (d.y + leftos) + "," + d.x + ")";
+      	 }
+    	
+    }).on("end",  function(d, i ) { 
+    		//console.log(d);
+    		//console.log("ct:" + i +"::" + (nodes.length-1));
+     		if (i==(nodes.length-1)) {
+     			svg.select("#g2").remove();
+     			zoomfit();
+     		}
+     });
+
+  // Update the node attributes and style
+  nodeUpdate.select('circle.node')
+    .attr('r', 6)
+    .style("fill", function(d) {
+        return d._children ? "lightsteelblue" : "#fff";
+    })
+    .attr('cursor', 'pointer');
+
+
+  // Remove any exiting nodes
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) {
+          return "translate(" + source.y + "," + source.x + ")";
+      })
+      .remove();
+
+  // On exit reduce the node circles size to 0
+  nodeExit.select('circle')
+    .attr('r', 1e-6);
+
+  // On exit reduce the opacity of text labels
+  nodeExit.select('text')
+    .style('fill-opacity', 1e-6);
+    
+  // ****************** links section ***************************
+
+  // Update the links...
+  var link = g.selectAll('path.link')
+      .data(links, function(d) { return d.id; });
+
+  // Enter any new links at the parent's previous position.
+  var linkEnter = link.enter().insert('path', "g")
+      .attr("class", "link")
+      .style("stroke", function(d){ return linkcol[d.data.gp]})
+      .attr('d', function(d){
+      	//console.log(d);
+        var o = {x: source.x0, y: source.y0}
+        return diagonal(o, o)
+      });
+
+  // UPDATE
+  var linkUpdate = linkEnter.merge(link);
+
+  // Transition back to the parent element position
+  linkUpdate.transition()
+      .duration(duration)
+      .attr('d', function(d){ return diagonal(d, d.parent) })
+      //.attr("transform", "translate(" + leftos + ", 0 )");
+      .attr("transform",  function(d){ 
+      	if (d.depth==3) {
+      		 return "translate(" + transfac + ", 0 )"
+      	} else if (d.depth==4) {
+      		 return "translate(" +  (transfac + (t4tr*1.95) ) + ", 0 )";
+
+      	
+      	} else {
+      	 	return "translate(" + leftos + ", 0 )"
+      	 }
+      	 
+      	 
+      	});
+      
+
+  // Remove any exiting links
+  var linkExit = link.exit().transition()
+      .duration(duration)
+      .attr('d', function(d) {
+        var o = {x: source.x, y: source.y}
+        return diagonal(o, o)
+      })
+      .remove();
+      
+
+
+  // Store the old positions for transition.
+  nodes.forEach(function(d){
+    d.x0 = d.x;
+    d.y0 = d.y;
+    
+  });
+
+/*function diagonal(s, d) {
+//function elbow(d, i) {
+  return "M" + d.y + "," + d.x
+      + "V" + s.x + "H" + s.y;
+}*/
+
+
+
+  // Creates a curved (diagonal) path from parent to the child nodes
+  function diagonal(s, d) {
+  
+  	//console.log(d.depth);
+  	
+  	if (d.depth==2) {
+  	
+  			var sx1 = s.x;
+  			var sy1 = s.y + t3tr;
+  			var dx1 = d.x;
+  			var dy1 = d.y;
+  	
+  		    path = `M ${sy1} ${sx1}
+            C ${(sy1 + dy1) / 2} ${sx1},
+              ${(sy1 + dy1) / 2} ${dx1},
+              ${dy1} ${dx1}`
+  	
+  	} else {
+  	
+  		    path = `M ${s.y} ${s.x}
+            C ${(s.y + d.y) / 2} ${s.x},
+              ${(s.y + d.y) / 2} ${d.x},
+              ${d.y} ${d.x}`
+  	
+  	}
+
+
+
+    return path
+  }
+  
+  // Toggle children on click.
+  function click2(d) {
+  	d3.event.stopPropagation();
+  }
+
+  // Toggle children on click.
+  function click(d) {
+  	//console.log(d);
+  	if (d.data.info=="info") {
+  	
+  	} else if (d.data.case!=undefined) {
+  		if (d.data.url!=undefined) {
+  			//alert("clicktourl" + d.data.case);
+  			gtag('event', "clicktourl" + d.data.case);
+       		window.open( d.data.url);
+       	}
+    } else {
+    	zoomfirst = -1;
+    	treemap.size([height*treeheightfac, width*treewidthfac]);
+		if (d.children) {
+			d._children = d.children;
+			d.children = null;
+		  } else {
+			d.children = d._children;
+			d._children = null;
+		}
+		svg.select("#g2").remove();
+		//console.log(root.children[0]);
+		var ndcount = 0;
+		root.children.forEach(function(d){ 
+			if (d.children!=null) {
+				ndcount += d.children.length
+			}
+		});
+  
+		treemap.size([height*treeheightfac*(Math.min(ndcount/50),0.65), width*treewidthfac])
+			.separation(function(a, b) { return (a.parent == b.parent ? 1 : 1.2) / (1 + (a.depth*2)); });
+		update(d);
+	}
+  }
+}
+
+function drawrel () {
+	svg.select("#g2").remove();
+	g2 = g.append("g").attr("id","g2");
+	
+    
+
+
+	//Also linked to confirmed cases
+	//involving South Korean, Malaysian
+	//and British nationals
+	
+         // drawLink (8,9, null, 0, 0, "Married",40,"#0055af", "0.5", 16);
+	////drawlink (61,67, null, 0, 0, "Family members",50,"#55cbe9", "0.2", 16);
+	//drawLink (13,26, null, -18, 15, "Mother and daughter",80,"#015b64", "1", 16);
+	
+	//drawLine (13,44, linkcol[6],"#8e9aa6");
+	
+	//drawlink (1,3, null, 0, 0, "Father and son",130,"#55cbe9", "0.5", 60);
+	//drawlink (4,11, null, 0, 0, "Travelling companions",115,"#00cc00", "0.4", 50);
+	//drawlink (12,18, null, 0, 0, "Travelling companions",110,"#ffcf47", "0.3", 55);
+	
+	//drawlink (41,75, null, 0, 0, "Family members",70,"#015b64", "0.3", 40);
+	
+	//drawlink (2,13, null, 0, -5, "Close contacts",80,"#c4482e", "0.6", 90);
+	//drawlink (13,26, 44, 5, 0, "Mother and daughter",50,"#c4482e", "0.9", 120);
+	
+	
+	//drawLink (50,65, 55, 0, 0, "Family members",40,"#55cbe9", "0.3", 16);
+	/*drawLink (1,3, 0, 0, "Father and son",150,"#015b64", "0.5", 20);
+	//drawlink (4,11, 0, 0, "Travelling companions",75,"#8e9aa6", "0.3", 50);
+	//drawlink (2,13, 0, -5, "Close contacts",50,"#c4482e", "0.6", 75);
+	//drawlink (12,18, 0, 0, "Travelling companions",70,"#ffcf47", "0.3", 40);
+	//drawlink (13,26, 5, 0, "Mother and daughter",50,"#c4482e", "0.5", 60);*/
+	
+	//drawLink (42,47, 0, 0, "Work at Seletar Aerospace Heights",90,"#015b64", "0.2", 20);
+	//drawLink (43,46, 0, 0, "Work at Resorts World Sentosa",60,"#c4482e", "0.5", 40);
+
+
+}
+function drawLine (case1,case2, colr, colr2) {
+
+  	
+  	if ((d3.select("#nd" + case1).empty())|| (d3.select("#nd" + case2).empty())){
+  		//alert("true!" + case1 + "::" + case2);
+  		
+  	} else {
+		var transtr1 = d3.select("#nd" + case1).attr("transform");
+		transtr1 = transtr1.substring(transtr1.indexOf("(")+1, transtr1.indexOf(")")).split(",");
+	
+		var transtr2 = d3.select("#nd" + case2).attr("transform");
+		transtr2 = transtr2.substring(transtr2.indexOf("(")+1, transtr2.indexOf(")")).split(",");
+	
+		var tranbox1 = d3.select("#nd" + case1).node().getBBox();
+		var tranbox2 = d3.select("#nd" + case2).node().getBBox();
+	
+	
+		var x1=Number(transtr1[0]);
+		var y1=Number(transtr1[1]);
+		var x2=Number(transtr2[0]);
+		var y2=Number(transtr2[1]);
+	
+				
+		if (y2 - y1 <5) {
+			//alert(y1 - y2);
+		} else {
+			x1 += (tranbox1.width + 0);
+			
+			//x2 -= 10;
+			//y1 -= 15;
+			//y2 += 2;
+			
+			y1 += 5;
+			//y2 += 12;
+			
+			
+			var linkdist = x1 + ((x2-x1) * 0.15);
+			var tick = 0;
+			var tickwidth = 16;
+			var tickpoint = y1 + ((y2-y1)*tick);
+	
+			g2.append('line')
+			  .attr('x1', linkdist)
+			  .attr('y1', y1)
+			  .attr('x2', linkdist)
+			  .attr('y2', y2)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr);
+			  
+			g2.append('line')
+			  .attr('x1', x1)
+			  .attr('y1', y1)
+			  .attr('x2', linkdist)
+			  .attr('y2', y1)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr);
+			  
+			  
+			  
+			  linkdist += 5;
+			  
+			  y1 -= 10;
+			  y2 -= 5;
+			  
+			  
+			  g2.append('line')
+			  .attr('x1', linkdist)
+			  .attr('y1', y1)
+			  .attr('x2', linkdist)
+			  .attr('y2', y2)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr2);
+			  
+			g2.append('line')
+			  .attr('x1', x1)
+			  .attr('y1', y1)
+			  .attr('x2', linkdist)
+			  .attr('y2', y1)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr2);
+			  
+			  g2.append('line')
+			  .attr('x1', x1 )
+			  .attr('y1', y2)
+			  .attr('x2', linkdist)
+			  .attr('y2', y2)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr2);
+			  
+			  g2.append('line')
+			  .attr('x1', linkdist-16)
+			  .attr('y1', y2)
+			  .attr('x2', linkdist-16)
+			  .attr('y2', y2+10)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr2);
+  
+				// Add labels for the nodes
+		  g2.append('text')
+			  //.attr("dy", "1.85em")
+			  .attr('x', linkdist+tickwidth - 80)
+			  .attr('y',y2+19)
+			  .attr("text-anchor", 'start')
+			  .text("Mother and daughter");
+		}
+  
+		  
+   	}
+}
+  
+function drawLink (case1,case2, case3, topos, bottomos, relstr, dist, colr, tick, tickwidth) {
+  
+  	
+  	if ((d3.select("#nd" + case1).empty())|| (d3.select("#nd" + case2).empty())){
+  		//alert("true!" + case1 + "::" + case2);
+  	} else {
+		
+		var transtr1 = d3.select("#nd" + case1).attr("transform");
+		transtr1 = transtr1.substring(transtr1.indexOf("(")+1, transtr1.indexOf(")")).split(",");
+	
+		var transtr2 = d3.select("#nd" + case2).attr("transform");
+		transtr2 = transtr2.substring(transtr2.indexOf("(")+1, transtr2.indexOf(")")).split(",");
+	
+		var tranbox1 = d3.select("#nd" + case1).node().getBBox();
+		var tranbox2 = d3.select("#nd" + case2).node().getBBox();
+	
+	
+		var x1=Number(transtr1[0]);
+		var y1=Number(transtr1[1]);
+		var x2=Number(transtr2[0]);
+		var y2=Number(transtr2[1]);
+	
+				
+		if (y2 - y1 <5) {
+	
+		} else {
+  
+			x1 += (tranbox1.width + 0);
+			x2 += (tranbox2.width + 0);
+	
+			y1 += (topos + 0);
+			y2 += (bottomos + 0);
+  
+			var linkdist = dist + Math.max(x1, x2);
+			//var linkdist = 50;
+	
+			//var tickpoint = (y2+y1)*tick;
+			var tickpoint = y1 + ((y2-y1)*tick);
+	
+			g2.append('line')
+			  .attr('x1', x1)
+			  .attr('y1', y1)
+			  .attr('x2', linkdist)
+			  .attr('y2', y1)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr);
+  
+		   g2.append('line')
+			  .attr('x1', linkdist)
+			  .attr('y1', Number(y1)- 1)
+			  .attr('x2', linkdist)
+			  .attr('y2', Number(y2) + 1)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr);
+  
+			g2.append('line')
+			  .attr('x1', linkdist)
+			  .attr('y1', y2)
+			  .attr('x2', x2)
+			  .attr('y2', y2)
+			  .style("stroke-width", 1)  
+			  .style('stroke',colr);
+  
+		   g2.append('line')
+			  .attr('x1', linkdist)
+			  .attr('y1', tickpoint)
+			  .attr('x2', linkdist+tickwidth)
+			  .attr('y2', tickpoint)
+			  .style("stroke-width", 1) 
+			  .style('stroke',colr);
+  
+				// Add labels for the nodes
+		  g2.append('text')
+			  //.attr("dy", "1.85em")
+			  .attr('x', linkdist+tickwidth + 5)
+			  .attr('y',tickpoint+5)
+			  .attr("text-anchor", 'start')
+			  .text(relstr);
+			  
+			if (case3!= null) {
+			
+				if (!d3.select("#nd" + case3).empty()){
+				
+					var transtr3 = d3.select("#nd" + case3).attr("transform");
+					transtr3 = transtr3.substring(transtr3.indexOf("(")+1, transtr3.indexOf(")")).split(",");
+	
+					var tranbox3 = d3.select("#nd" + case3).node().getBBox();
+	
+					var x3=Number(transtr3[0]);
+					var y3=Number(transtr3[1]);
+				
+				
+					if (x3>1) {
+					
+						var colr2 = "#015b64";
+				
+						x3 += (tranbox3.width + 0);
+						
+						linkdist2 = linkdist + 82;
+				
+						g2.append('line')
+						  .attr('x1', linkdist2)
+						  .attr('y1', y3)
+						  .attr('x2', x3)
+						  .attr('y2', y3)
+						  .style("stroke-width", 1)  
+						  .style('stroke',colr2);
+						  
+						g2.append('line')
+						  .attr('x1', linkdist2)
+						  .attr('y1', y3)
+						  .attr('x2', linkdist2)
+						  .attr('y2', tickpoint-15)
+						  .style("stroke-width", 1)  
+						  .style('stroke',colr2);
+						  
+						g2.append('line')
+						  .attr('x1', linkdist2)
+						  .attr('y1', tickpoint-15)
+						  .attr('x2', linkdist)
+						  .attr('y2', tickpoint-15)
+						  .style("stroke-width", 1)  
+						  .style('stroke',colr2);
+						  
+						linkdist3 = (tickpoint - y3) * 0.88;
+						  
+						g2.append('line')
+						  .attr('x1', linkdist2)
+						  .attr('y1', y3 + linkdist3)
+						  .attr('x2', linkdist2 + 40)
+						  .attr('y2', y3 + linkdist3)
+						  .style("stroke-width", 1)  
+						  .style('stroke',colr2);
+						  
+						 g2.append('text')
+							  .attr('x', linkdist2 + 40 + 5)
+							  .attr('y',y3 + linkdist3 + 5)
+							  .attr("text-anchor", 'start')
+							  .text("Contacts");
+				  
+					}
+				}
+			}
+   	  	}
+   	}
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+</script>
+
+
+</body><!--
+     FILE ARCHIVED ON 13:31:21 Feb 20, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:13:02 Mar 24, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  esindex: 0.02
+  PetaboxLoader3.datanode: 303.256 (4)
+  load_resource: 486.21
+  RedisCDXSource: 11.423
+  LoadShardBlock: 86.285 (3)
+  exclusion.robots.policy: 0.363
+  exclusion.robots: 0.378
+  captures_list: 134.387
+  PetaboxLoader3.resolve: 118.445
+  CDXLines.iter: 29.71 (3)
+-->
